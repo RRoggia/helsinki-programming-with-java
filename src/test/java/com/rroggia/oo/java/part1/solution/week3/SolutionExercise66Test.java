@@ -1,10 +1,10 @@
 package com.rroggia.oo.java.part1.solution.week3;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 
 import org.junit.Test;
+
+import com.rroggia.oo.java.part1.week3.Exercise66Test;
 
 public class SolutionExercise66Test {
 
@@ -16,7 +16,7 @@ public class SolutionExercise66Test {
 		numbers.add(7);
 		numbers.add(2);
 
-		assertEquals(7, SolutionExercise66.greatest(numbers));
+		Exercise66Test.testImplementationOfGreatest(SolutionExercise66.class, 7, numbers);
 
 	}
 
@@ -28,7 +28,7 @@ public class SolutionExercise66Test {
 		numbers.add(3);
 		numbers.add(3);
 
-		assertEquals(3, SolutionExercise66.greatest(numbers));
+		Exercise66Test.testImplementationOfGreatest(SolutionExercise66.class, 3, numbers);
 
 	}
 

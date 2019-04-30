@@ -1,7 +1,10 @@
 package com.rroggia.oo.java.part1.week3;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 import org.junit.Test;
@@ -16,7 +19,7 @@ public class Exercise66Test {
 		numbers.add(7);
 		numbers.add(2);
 
-		assertEquals(7, Exercise66.greatest(numbers));
+		testImplementationOfGreatest(Exercise66.class, 7, numbers);
 
 	}
 
@@ -27,8 +30,33 @@ public class Exercise66Test {
 		numbers.add(3);
 		numbers.add(3);
 		numbers.add(3);
+		testImplementationOfGreatest(Exercise66.class, 3, numbers);
 
-		assertEquals(3, Exercise66.greatest(numbers));
+	}
+
+	public static void testImplementationOfGreatest(Class<?> implementationClass, int expectedResult,
+			ArrayList<Integer> list) {
+		try {
+			Method instanceMethod = implementationClass.getMethod("greatest", ArrayList.class);
+
+			Object invokeResult = instanceMethod.invoke(null, list);
+
+			int result;
+
+			if (invokeResult != null)
+				result = (int) invokeResult;
+			else
+				throw new IllegalArgumentException();
+
+			assertEquals(expectedResult, result);
+
+		} catch (NoSuchMethodException e) {
+			fail("Create the method greatest, that returns the greatest number in the list as a return value.");
+		} catch (ClassCastException | NullPointerException | IllegalAccessException | IllegalArgumentException e) {
+			fail("Your method must follow: public static int greatest(ArrayList<Integer> list)");
+		} catch (InvocationTargetException e) {
+			fail(e.getTargetException().getMessage());
+		}
 
 	}
 
