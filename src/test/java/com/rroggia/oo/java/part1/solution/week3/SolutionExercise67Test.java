@@ -1,10 +1,10 @@
 package com.rroggia.oo.java.part1.solution.week3;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 
 import org.junit.Test;
+
+import com.rroggia.oo.java.part1.week3.Exercise67Test;
 
 public class SolutionExercise67Test {
 
@@ -16,7 +16,7 @@ public class SolutionExercise67Test {
 		numbers.add(7);
 		numbers.add(2);
 
-		assertEquals(5.666667, SolutionExercise67.variance(numbers), 0.01);
+		Exercise67Test.testImplementationOfVariance(SolutionExercise67.class, 5.666667, numbers);
 
 	}
 
