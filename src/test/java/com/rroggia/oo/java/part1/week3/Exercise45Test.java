@@ -12,27 +12,28 @@ public class Exercise45Test {
 
 	@Test
 	public void firstParameterIsGreatest() {
-		Exercise45Test.greatest(10, 10, 3, 2);
+		testImplementationOfGreatestMethod(Exercise45.class, 10, 10, 3, 2);
 	}
 
 	@Test
 	public void secondParameterIsGreatest() {
-		Exercise45Test.greatest(11, -5, 11, 0);
+		testImplementationOfGreatestMethod(Exercise45.class, 11, -5, 11, 0);
 	}
 
 	@Test
 	public void thirdParameterIsGreatest() {
-		Exercise45Test.greatest(5, 3, 3, 5);
+		testImplementationOfGreatestMethod(Exercise45.class, 5, 3, 3, 5);
 	}
 
 	@Test
 	public void parametersAreEqual() {
-		Exercise45Test.greatest(4, 4, 4, 4);
+		testImplementationOfGreatestMethod(Exercise45.class, 4, 4, 4, 4);
 	}
 
-	private static void greatest(int expectedResult, int number1, int number2, int number3) {
+	public static void testImplementationOfGreatestMethod(Class<?> implementationClass, int expectedResult, int number1,
+			int number2, int number3) {
 		try {
-			Method staticMethod = Exercise45.class.getMethod("greatest", int.class, int.class, int.class);
+			Method staticMethod = implementationClass.getMethod("greatest", int.class, int.class, int.class);
 			Object invokeResult = staticMethod.invoke(null, number1, number2, number3);
 			int result;
 
@@ -50,6 +51,7 @@ public class Exercise45Test {
 		} catch (InvocationTargetException e) {
 			fail(e.getTargetException().getMessage());
 		}
+
 	}
 
 }
