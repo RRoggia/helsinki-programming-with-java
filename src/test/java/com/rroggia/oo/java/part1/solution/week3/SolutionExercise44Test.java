@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.rroggia.oo.java.part1.week3.Exercise44;
 import com.rroggia.oo.java.part1.week3.Exercise44Test;
 
 public class SolutionExercise44Test {
@@ -17,12 +16,12 @@ public class SolutionExercise44Test {
 
 	@Test
 	public void secondParameterIsTheLeast() {
-		Exercise44Test.testImplementationOfLeastMethod(Exercise44.class, 3, 8, 3);
+		Exercise44Test.testImplementationOfLeastMethod(SolutionExercise44.class, 3, 8, 3);
 	}
 
 	@Test
 	public void parametersAreEqual() {
-		Exercise44Test.testImplementationOfLeastMethod(Exercise44.class, 4, 4, 4);
+		Exercise44Test.testImplementationOfLeastMethod(SolutionExercise44.class, 4, 4, 4);
 	}
 
 }
