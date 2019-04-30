@@ -12,22 +12,23 @@ public class Exercise44Test {
 
 	@Test
 	public void firstParameterIsTheLeast() {
-		Exercise44Test.least(1, 1, 8);
+		testImplementationOfLeastMethod(Exercise44.class, 1, 1, 8);
 	}
 
 	@Test
 	public void secondParameterIsTheLeast() {
-		Exercise44Test.least(3, 8, 3);
+		testImplementationOfLeastMethod(Exercise44.class, 3, 8, 3);
 	}
 
 	@Test
 	public void parametersAreEqual() {
-		Exercise44Test.least(4, 4, 4);
+		testImplementationOfLeastMethod(Exercise44.class, 4, 4, 4);
 	}
 
-	private static void least(int expectedResult, int number1, int number2) {
+	public static void testImplementationOfLeastMethod(Class<?> implementationClass, int expectedResult, int number1,
+			int number2) {
 		try {
-			Method staticMethod = Exercise44.class.getMethod("least", int.class, int.class);
+			Method staticMethod = implementationClass.getMethod("least", int.class, int.class);
 			Object invokeResult = staticMethod.invoke(null, number1, number2);
 			int result;
 
