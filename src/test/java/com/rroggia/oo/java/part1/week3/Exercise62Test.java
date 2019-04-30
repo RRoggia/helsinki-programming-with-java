@@ -38,7 +38,7 @@ public class Exercise62Test {
 			assertFalse("The list still contain the last element, Did you removed the last one?", list.contains("Bob"));
 
 		} catch (NoSuchMethodException e) {
-			fail("Create the method countItems,  which removes the last item from the list.");
+			fail("Create the method removeLast,  which removes the last item from the list.");
 		} catch (ClassCastException | NullPointerException | IllegalAccessException | IllegalArgumentException e) {
 			fail("Your method must follow: public static void removeLast(ArrayList<String> list)");
 		} catch (InvocationTargetException e) {

@@ -39,7 +39,7 @@ public class Exercise64Test {
 			assertEquals(expectedResult, result, 0.0);
 
 		} catch (NoSuchMethodException e) {
-			fail("Create the method sum, that calculates the average of the items in that list.");
+			fail("Create the method average, that calculates the average of the items in that list.");
 		} catch (ClassCastException | NullPointerException | IllegalAccessException | IllegalArgumentException e) {
 			fail("Your method must follow: public static double average(ArrayList<Integer> list)");
 		} catch (InvocationTargetException e) {
