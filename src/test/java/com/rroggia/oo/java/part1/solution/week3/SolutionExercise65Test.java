@@ -1,11 +1,10 @@
 package com.rroggia.oo.java.part1.solution.week3;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.fail;
-
 import java.util.ArrayList;
 
 import org.junit.Test;
+
+import com.rroggia.oo.java.part1.week3.Exercise65Test;
 
 public class SolutionExercise65Test {
 
@@ -19,13 +18,8 @@ public class SolutionExercise65Test {
 		addWordToArrays("Benvenuto!", words, expectedLenghts);
 		addWordToArrays("badger badger badger badger", words, expectedLenghts);
 
-		ArrayList<Integer> lenghts = SolutionExercise65.lenghts(words);
+		Exercise65Test.testImplementationOfLengths(SolutionExercise65.class, expectedLenghts, words);
 
-		if (lenghts == null) {
-			fail();
-		}
-
-		assertArrayEquals(expectedLenghts.toArray(), lenghts.toArray());
 	}
 
 	private void addWordToArrays(String word, ArrayList<String> words, ArrayList<Integer> expectedLenghts) {
