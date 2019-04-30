@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Exercise61 {
 
 	public static int countItems(ArrayList<String> names) {
-		return 0;
+		throw new RuntimeException("You have to implement this method. Don't forget to remove this statement.");
 	}
 
 }

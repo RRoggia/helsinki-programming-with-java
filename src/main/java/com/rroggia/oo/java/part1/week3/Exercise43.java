@@ -4,9 +4,10 @@ public class Exercise43 {
 
 	public static int sum(int number1, int number2, int number3, int number4) {
 		// write program code here
-		// remember that the method needs a return in the end (replace the "return" below)
+		// remember that the method needs a return in the end (replace the "return"
+		// below)
 
-		return 0;
+		throw new RuntimeException("You have to implement this method. Don't forget to remove this statement.");
 	}
 
 }

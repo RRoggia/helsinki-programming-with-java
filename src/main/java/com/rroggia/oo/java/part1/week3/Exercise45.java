@@ -5,7 +5,7 @@ public class Exercise45 {
 	public static int greatest(int number1, int number2, int number3) {
 		// write your code here
 
-		return 0;
+		throw new RuntimeException("You have to implement this method. Don't forget to remove this statement.");
 	}
 
 }

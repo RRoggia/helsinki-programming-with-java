@@ -7,7 +7,7 @@ public class Exercise63 {
 	public static int sum(ArrayList<Integer> list) {
 		// write your code here
 
-		return 0;
+		throw new RuntimeException("You have to implement this method. Don't forget to remove this statement.");
 	}
 
 }

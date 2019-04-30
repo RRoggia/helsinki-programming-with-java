@@ -7,7 +7,7 @@ public class Exercise44 {
 		// do not print anything inside the method
 
 		// method needs a return in the end
-		return 0;
+		throw new RuntimeException("You have to implement this method. Don't forget to remove this statement.");
 	}
 
 }
