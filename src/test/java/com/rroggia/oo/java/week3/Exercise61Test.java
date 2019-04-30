@@ -16,7 +16,7 @@ public class Exercise61Test {
 		names.add("Hello");
 		names.add("Ola");
 
-		assertEquals(Exercise61.countItems(names), 4);
+		assertEquals(4, Exercise61.countItems(names));
 
 	}
 

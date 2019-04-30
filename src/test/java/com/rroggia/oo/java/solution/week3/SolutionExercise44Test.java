@@ -8,17 +8,17 @@ public class SolutionExercise44Test {
 
 	@Test
 	public void firstParameterIsTheLeast() {
-		assertEquals(SolutionExercise44.least(1, 8), 1);
+		assertEquals(1, SolutionExercise44.least(1, 8));
 	}
 
 	@Test
 	public void secondParameterIsTheLeast() {
-		assertEquals(SolutionExercise44.least(8, 3), 3);
+		assertEquals(3, SolutionExercise44.least(8, 3));
 	}
 
 	@Test
 	public void parametersAreEqual() {
-		assertEquals(SolutionExercise44.least(4, 4), 4);
+		assertEquals(4, SolutionExercise44.least(4, 4));
 	}
 
 }

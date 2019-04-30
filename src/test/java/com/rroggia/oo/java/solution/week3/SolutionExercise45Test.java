@@ -8,22 +8,22 @@ public class SolutionExercise45Test {
 
 	@Test
 	public void firstParameterIsGreatest() {
-		assertEquals(SolutionExercise45.greatest(10, 3, 2), 10);
+		assertEquals(10, SolutionExercise45.greatest(10, 3, 2));
 	}
 
 	@Test
 	public void secondParameterIsGreatest() {
-		assertEquals(SolutionExercise45.greatest(-5, 11, 0), 11);
+		assertEquals(11, SolutionExercise45.greatest(-5, 11, 0));
 	}
 
 	@Test
 	public void thirdParameterIsGreatest() {
-		assertEquals(SolutionExercise45.greatest(3, 3, 5), 5);
+		assertEquals(5, SolutionExercise45.greatest(3, 3, 5));
 	}
 
 	@Test
 	public void parametersAreEqual() {
-		assertEquals(SolutionExercise45.greatest(4, 4, 4), 4);
+		assertEquals(4, SolutionExercise45.greatest(4, 4, 4));
 	}
 
 }
