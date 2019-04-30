@@ -12,8 +12,12 @@ public class Exercise43Test {
 
 	@Test
 	public void sum() throws SecurityException, InvocationTargetException {
+		testImplementationOfSumMethod(Exercise43.class);
+	}
+
+	public static void testImplementationOfSumMethod(Class<?> implementationClass) {
 		try {
-			Method staticMethod = Exercise43.class.getMethod("sum", int.class, int.class, int.class, int.class);
+			Method staticMethod = implementationClass.getMethod("sum", int.class, int.class, int.class, int.class);
 			Object invokeResult = staticMethod.invoke(null, 1, 2, 3, 4);
 			int result;
 
