@@ -13,8 +13,8 @@ public class Exercise43Test {
 	@Test
 	public void sum() throws SecurityException, InvocationTargetException {
 		try {
-			Method sumInstanceMethod = Exercise43.class.getMethod("sum", int.class, int.class, int.class, int.class);
-			Object invokeResult = sumInstanceMethod.invoke(null, 1, 2, 3, 4);
+			Method staticMethod = Exercise43.class.getMethod("sum", int.class, int.class, int.class, int.class);
+			Object invokeResult = staticMethod.invoke(null, 1, 2, 3, 4);
 			int result;
 
 			if (invokeResult != null)

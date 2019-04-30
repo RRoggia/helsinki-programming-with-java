@@ -27,8 +27,8 @@ public class Exercise44Test {
 
 	private static void least(int expectedResult, int number1, int number2) {
 		try {
-			Method sumInstanceMethod = Exercise44.class.getMethod("least", int.class, int.class);
-			Object invokeResult = sumInstanceMethod.invoke(null, number1, number2);
+			Method staticMethod = Exercise44.class.getMethod("least", int.class, int.class);
+			Object invokeResult = staticMethod.invoke(null, number1, number2);
 			int result;
 
 			if (invokeResult != null)
