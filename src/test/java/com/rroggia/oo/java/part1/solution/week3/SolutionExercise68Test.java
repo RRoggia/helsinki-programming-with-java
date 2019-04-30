@@ -1,11 +1,10 @@
 package com.rroggia.oo.java.part1.solution.week3;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import java.util.ArrayList;
 
 import org.junit.Test;
+
+import com.rroggia.oo.java.part1.week3.Exercise68Test;
 
 public class SolutionExercise68Test {
 
@@ -20,12 +19,12 @@ public class SolutionExercise68Test {
 
 	@Test
 	public void containsNumberTwice() {
-		assertTrue(SolutionExercise68.moreThanOnce(numbers, 2));
+		Exercise68Test.testImplementationOfMoreThanOnce(SolutionExercise68.class, true, numbers, 2);
 	}
 
 	@Test
 	public void containsNumberOnce() {
-		assertFalse(SolutionExercise68.moreThanOnce(numbers, 3));
+		Exercise68Test.testImplementationOfMoreThanOnce(SolutionExercise68.class, false, numbers, 3);
 	}
 
 }
