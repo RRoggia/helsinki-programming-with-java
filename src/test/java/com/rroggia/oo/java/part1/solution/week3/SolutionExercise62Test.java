@@ -1,13 +1,10 @@
 package com.rroggia.oo.java.part1.solution.week3;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-
 import java.util.ArrayList;
 
 import org.junit.Test;
 
-import com.rroggia.oo.java.part1.solution.week3.SolutionExercise62;
+import com.rroggia.oo.java.part1.week3.Exercise62Test;
 
 public class SolutionExercise62Test {
 
@@ -21,11 +18,7 @@ public class SolutionExercise62Test {
 
 		int sizeBeforeRemoveLast = brothers.size() - 1;
 
-		SolutionExercise62.removeLast(brothers);
-
-		assertEquals(brothers.size(), sizeBeforeRemoveLast);
-
-		assertFalse(brothers.contains("Bob"));
+		Exercise62Test.testImplementationOfRemoveLast(SolutionExercise62.class, sizeBeforeRemoveLast, brothers);
 
 	}
 
