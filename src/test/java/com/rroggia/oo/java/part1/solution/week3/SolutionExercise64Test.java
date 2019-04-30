@@ -18,7 +18,7 @@ public class SolutionExercise64Test {
 		numbers.add(7);
 		numbers.add(2);
 
-		assertEquals(3.5, SolutionExercise64.average(numbers), 1.0);
+		assertEquals(3.5, SolutionExercise64.average(numbers), 0.0);
 	}
 
 }

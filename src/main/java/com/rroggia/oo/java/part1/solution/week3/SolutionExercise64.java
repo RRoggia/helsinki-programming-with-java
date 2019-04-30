@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class SolutionExercise64 {
 
 	public static double average(ArrayList<Integer> list) {
-		return SolutionExercise63.sum(list) / list.size();
+		double size = list.size();
+		return SolutionExercise63.sum(list) / size;
 	}
 
 }
