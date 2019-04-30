@@ -1,16 +1,37 @@
 package com.rroggia.oo.java.part1.week3;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import org.junit.Test;
-
-import com.rroggia.oo.java.part1.week3.Exercise46;
 
 public class Exercise46Test {
 
 	@Test
 	public void average() {
-		assertEquals(3.5, Exercise46.average(4, 3, 6, 1), 1.0);
+
+		try {
+			Method instanceMethod = Exercise46.class.getMethod("average", int.class, int.class, int.class, int.class);
+			Object invokeResult = instanceMethod.invoke(null, 4, 3, 6, 1);
+			double result;
+
+			if (invokeResult != null)
+				result = (double) invokeResult;
+			else
+				throw new IllegalArgumentException();
+
+			assertEquals(3.5, result, 0.0);
+
+		} catch (NoSuchMethodException e) {
+			fail("Create the method average, which calculates the average of the numbers it gets as parameters.");
+		} catch (ClassCastException | NullPointerException | IllegalAccessException | IllegalArgumentException e) {
+			fail("Your method must follow: public static double average(int number1, int number2, int number3, int number4)");
+		} catch (InvocationTargetException e) {
+			fail(e.getTargetException().getMessage());
+		}
 	}
 
 }
