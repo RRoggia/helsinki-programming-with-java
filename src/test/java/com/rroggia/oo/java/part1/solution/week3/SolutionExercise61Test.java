@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import com.rroggia.oo.java.part1.week3.Exercise61Test;
+import com.rroggia.oo.java.part1.exercise.week3.Exercise61Test;
 
 public class SolutionExercise61Test {
 

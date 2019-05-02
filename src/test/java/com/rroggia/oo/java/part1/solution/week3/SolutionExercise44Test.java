@@ -2,7 +2,7 @@ package com.rroggia.oo.java.part1.solution.week3;
 
 import org.junit.Test;
 
-import com.rroggia.oo.java.part1.week3.Exercise44Test;
+import com.rroggia.oo.java.part1.exercise.week3.Exercise44Test;
 
 public class SolutionExercise44Test {
 
