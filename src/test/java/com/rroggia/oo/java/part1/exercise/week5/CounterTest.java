@@ -61,4 +61,49 @@ public class CounterTest {
 
 	}
 
+	@Test
+	public void increaseMultiple() {
+		Constructor<SolutionCounter> constructor = TestInstanceGenerator.getConstructor(SolutionCounter.class);
+		SolutionCounter counter = TestInstanceGenerator.getInstanceOfClass(SolutionCounter.class, constructor);
+
+		assertEquals(0, counter.value());
+		counter.increase(10);
+		assertEquals(10, counter.value());
+	}
+
+	@Test
+	public void increaseMultipleNegative() {
+		Constructor<SolutionCounter> constructor = TestInstanceGenerator.getConstructor(SolutionCounter.class);
+		SolutionCounter counter = TestInstanceGenerator.getInstanceOfClass(SolutionCounter.class, constructor);
+
+		assertEquals(0, counter.value());
+		counter.increase(-3);
+		assertEquals(0, counter.value());
+	}
+
+	@Test
+	public void decreaseMultiple() {
+		Constructor<SolutionCounter> constructor = TestInstanceGenerator.getConstructor(SolutionCounter.class);
+		SolutionCounter counter = TestInstanceGenerator.getInstanceOfClass(SolutionCounter.class, constructor);
+
+		assertEquals(0, counter.value());
+		counter.increase(10);
+		assertEquals(10, counter.value());
+
+		counter.decrease(3);
+		assertEquals(7, counter.value());
+	}
+
+	@Test
+	public void decreaseMultipleNegative() {
+		Constructor<SolutionCounter> constructor = TestInstanceGenerator.getConstructor(SolutionCounter.class);
+		SolutionCounter counter = TestInstanceGenerator.getInstanceOfClass(SolutionCounter.class, constructor);
+
+		assertEquals(0, counter.value());
+		counter.increase(2);
+		assertEquals(2, counter.value());
+		counter.increase(-3);
+		assertEquals(2, counter.value());
+	}
+
 }
