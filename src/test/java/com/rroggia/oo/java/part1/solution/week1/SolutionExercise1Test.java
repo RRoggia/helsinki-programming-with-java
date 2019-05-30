@@ -2,25 +2,23 @@ package com.rroggia.oo.java.part1.solution.week1;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.ByteArrayOutputStream;
-
 import org.junit.Test;
 
-import com.rroggia.oo.java.part1.MockConsoleOutput;
+import com.rroggia.oo.java.ExerciseRunner;
+import com.rroggia.oo.java.ExerciseTest;
 
-public class SolutionExercise1Test {
+public class SolutionExercise1Test extends ExerciseTest {
 
 	@Test
 	public void testIfPrintedJaneDone() {
+		String result = new ExerciseRunner(getExerciseImplementationClass()).getOneLinePrintedInTheConsole();
+		assertEquals("Jane Doe", result);
 
-		ByteArrayOutputStream outputBytesFromConsole = MockConsoleOutput.getMockedOutputStream();
+	}
 
-		SolutionExercise1.main(null);
-
-		String printed = outputBytesFromConsole.toString().replace("\n", "").replace("\r", "");
-
-		assertEquals("Jane Doe", printed);
-
+	@Override
+	protected Class<?> getExerciseImplementationClass() {
+		return SolutionExercise1.class;
 	}
 
 }
