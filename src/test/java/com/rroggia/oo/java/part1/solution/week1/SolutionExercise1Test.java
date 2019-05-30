@@ -10,7 +10,7 @@ import com.rroggia.oo.java.ExerciseTest;
 public class SolutionExercise1Test extends ExerciseTest {
 
 	@Test
-	public void testIfPrintedJaneDone() {
+	public void printedJaneDoe() {
 		String result = new ExerciseRunner(getExerciseImplementationClass()).getOneLinePrintedInTheConsole();
 		assertEquals("Jane Doe", result);
 
