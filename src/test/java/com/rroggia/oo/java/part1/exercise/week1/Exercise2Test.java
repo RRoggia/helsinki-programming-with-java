@@ -7,13 +7,8 @@ public class Exercise2Test extends SolutionExercise2Test {
 	private static final String QUALIFIED_NAME_EXERCISE2 = "com.rroggia.oo.java.part1.week1.Exercise2";
 
 	@Override
-	protected Class<?> getExerciseImplementationClass() {
-		try {
+	protected Class<?> determineImplementationClass() throws ClassNotFoundException {
 			return Class.forName(QUALIFIED_NAME_EXERCISE2);
-		} catch (ClassNotFoundException e) {
-			throw new RuntimeException("Missing implementation class for " + this.getClass().getSimpleName()
-					+ ". Expected class " + QUALIFIED_NAME_EXERCISE2);
-		}
 	}
 
 }

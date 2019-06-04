@@ -11,13 +11,13 @@ public class SolutionExercise1Test extends ExerciseTest {
 
 	@Test
 	public void printedJaneDoe() {
-		String result = new ExerciseRunner(getExerciseImplementationClass()).getOneLinePrintedInTheConsole();
+		String result = new ExerciseRunner(getExerciseImplementationClass1()).getOneLinePrintedInTheConsole();
 		assertEquals("Jane Doe", result);
 
 	}
 
 	@Override
-	protected Class<?> getExerciseImplementationClass() {
+	protected Class<?> determineImplementationClass() throws ClassNotFoundException {
 		return SolutionExercise1.class;
 	}
 
