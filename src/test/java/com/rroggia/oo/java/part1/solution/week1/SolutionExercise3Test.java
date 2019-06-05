@@ -13,7 +13,7 @@ public class SolutionExercise3Test extends ExerciseTest {
 
 	@Test
 	public void printedSpruce() {
-		List<String> console = new ExerciseRunner(getExerciseImplementationClass1()).getAllLinesPrintedInTheConsole();
+		List<String> console = new ExerciseRunner(getExerciseImplementationClass()).getAllLinesPrintedInTheConsole();
 
 		assertEquals("Missing lines to print", 6, console.size());
 

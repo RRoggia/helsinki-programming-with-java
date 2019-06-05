@@ -4,7 +4,7 @@ public abstract class ExerciseTest {
 
 	protected abstract Class<?> determineImplementationClass() throws ClassNotFoundException;
 
-	public Class<?> getExerciseImplementationClass1() {
+	public Class<?> getExerciseImplementationClass() {
 		try {
 			return determineImplementationClass();
 		} catch (ClassNotFoundException e) {

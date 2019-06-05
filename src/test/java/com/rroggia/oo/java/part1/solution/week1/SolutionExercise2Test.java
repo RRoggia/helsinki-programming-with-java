@@ -13,7 +13,7 @@ public class SolutionExercise2Test extends ExerciseTest {
 
 	@Test
 	public void printedHelloWorldAndAllPeopleOfTheWorld() {
-		List<String> response = new ExerciseRunner(getExerciseImplementationClass1()).getAllLinesPrintedInTheConsole();
+		List<String> response = new ExerciseRunner(getExerciseImplementationClass()).getAllLinesPrintedInTheConsole();
 
 		assertEquals("Hello world!", response.get(0));
 		assertEquals("(And all the people of the world)", response.get(1));

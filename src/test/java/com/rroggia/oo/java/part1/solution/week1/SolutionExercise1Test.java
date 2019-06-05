@@ -11,7 +11,7 @@ public class SolutionExercise1Test extends ExerciseTest {
 
 	@Test
 	public void printedJaneDoe() {
-		String result = new ExerciseRunner(getExerciseImplementationClass1()).getOneLinePrintedInTheConsole();
+		String result = new ExerciseRunner(getExerciseImplementationClass()).getOneLinePrintedInTheConsole();
 		assertEquals("Jane Doe", result);
 
 	}
